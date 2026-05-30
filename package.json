@@ -1,0 +1,36 @@
+{
+  "name": "suanming-app",
+  "version": "1.0.0",
+  "description": "玄机算命网 - 专业在线算命平台",
+  "scripts": {
+    "sync": "bash scripts/sync-assets.sh",
+    "patch": "node scripts/patch-api-urls.js",
+    "build": "npm run sync && npm run patch",
+    "cap:init": "npx cap add android && npx cap add ios",
+    "cap:sync": "npx cap sync",
+    "cap:open:android": "npx cap open android",
+    "cap:open:ios": "npx cap open ios",
+    "cap:run:android": "npx cap run android",
+    "cap:run:ios": "npx cap run ios",
+    "icons": "bash scripts/generate-icons.sh"
+  },
+  "dependencies": {
+    "@capacitor/android": "^6.0.0",
+    "@capacitor/core": "^6.0.0",
+    "@capacitor/haptics": "^6.0.0",
+    "@capacitor/ios": "^6.0.0",
+    "@capacitor/network": "^6.0.0",
+    "@capacitor/preferences": "^6.0.0",
+    "@capacitor/splash-screen": "^6.0.0",
+    "@capacitor/status-bar": "^6.0.0",
+    "@capacitor/app": "^6.0.0"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^6.0.0",
+    "typescript": "^5.4.0",
+    "cordova-res": "^0.15.4"
+  },
+  "author": "玄机算命网",
+  "license": "UNLICENSED",
+  "private": true
+}
